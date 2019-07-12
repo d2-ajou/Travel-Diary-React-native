@@ -11,9 +11,11 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
+  TextInput,
   View,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -26,89 +28,164 @@ import {
 
 const App = () => {
   return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+    <View>
+      <View style={styles.container}>
+       
+        <Text style={styles.welcome}>Travel Diary</Text>
+       <View style={{height:30}}/>
+        
+       <View style={styles.emailContainer}>
+          <TextInput style={styles.textInput} placeholder="Email"
+            keyboardType="email-address"/>
+        </View>
+        <View style={styles.passwordContainer}>
+         <TextInput style={styles.textInput} placeholder="Password"
+            secureTextEntry={true}/>
+       </View>
+
+       <TouchableOpacity>
+         <View style={styles.forgotPassword}>
+           <Text style={styles.forgotText}>Forgot password?</Text>
+         </View>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>SIGN IN</Text>
           </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.normalContainer}>
+        <Text style={styles.normalText}>Do not have account?</Text>
+      </View>
+      <TouchableOpacity>
+        <View style={styles.createAccount}>
+          <Text style={styles.createText}>Create new account</Text>
+        </View>
+      </TouchableOpacity>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    flex:10,
+    paddingTop:50
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
+  logo: {
+    width:300,
+    height:60,
+    resizeMode:'contain',
   },
-  body: {
-    backgroundColor: Colors.white,
+  forgotPassword: {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    marginVertical:10,
+    height:100,
+    alignItems: 'flex-start',
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  createAccount: {
+    alignItems:'center',
+    height:30,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
+  normalContainer: {
+    alignItems:'center',
+    marginTop:430,
+    height:20,
+
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
+  normalText: {
+    color:'#5B5A5A',
+    fontSize:12,
+    alignItems: 'center',
+    textAlign:'center',
+    width:330,
   },
-  highlight: {
-    fontWeight: '700',
+  createText: {
+    color:'#FF7260',
+    fontSize:12,
+    alignItems: 'center',
+    textAlign:'center',
+    width:330,
   },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  forgotText: {
+    color:'#5B5A5A',
+    fontSize:12,
+    alignItems: 'flex-end',
+    textAlign:'right',
+    width:330,
   },
+  logoContiner: {
+    height:170,
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+  },
+  welcome: {
+    fontSize:25,
+    color:'gray',
+    letterSpacing:6
+  },
+  textInput: {
+    color:'#989899',
+    flex:1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontSize:14,
+  },
+  button: {
+    width:325,
+    borderColor: 'black',
+    borderWidth: 1,
+    height:50,
+    padding:10,
+    borderRadius:3,
+    marginTop:40,
+    backgroundColor:'gray',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#129793',
+    shadowOffset: {
+      width: 0,
+      height: 4
+    },
+    shadowRadius: 5,
+    shadowOpacity: 0.8
+  },
+  buttonText: {
+    color:'white',
+    fontSize:12
+  },
+  emailContainer: {
+    width:325,
+    borderColor: '#CFD0D1',
+    borderWidth: 1,
+    height:60,
+    padding:10,
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    borderBottomLeftRadius:0,
+    borderBottomRightRadius:0,
+    borderBottomWidth:0,
+    backgroundColor:'#F5F6F7'
+  },
+  passwordContainer: {
+    width:325,
+    borderColor: '#CFD0D1',
+    borderWidth: 1,
+    height:60,
+    padding:10,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomLeftRadius:4,
+    borderBottomRightRadius:4,
+    backgroundColor:'#F5F6F7'
+    
+  }
+  
 });
 
 export default App;
