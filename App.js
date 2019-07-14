@@ -11,9 +11,9 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  TextInput,
   View,
   Text,
+  TextInput,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
@@ -32,9 +32,9 @@ const App = () => {
       <View style={styles.container}>
        
         <Text style={styles.welcome}>Travel Diary</Text>
-       <View style={{height:30}}/>
+        <View style={{height:30}}/>
         
-       <View style={styles.emailContainer}>
+        <View style={styles.emailContainer}>
           <TextInput style={styles.textInput} placeholder="Email"
             keyboardType="email-address"/>
         </View>
