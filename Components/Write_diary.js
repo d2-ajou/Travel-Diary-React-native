@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Platform } from 'react-native';
 
-export default class MainScreen extends Component {
+export default class Write_diary extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Diary-list</Text>
+        <Text>Write-diary</Text>
       </View>
     );
   }

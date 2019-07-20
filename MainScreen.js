@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, Platform } from 'react-native';
 
+import Log_in from './Component/Log_in';
+
 export default class MainScreen extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>MainScreen</Text>
-      </View>
+      <Log_in/>
     );
   }
 }

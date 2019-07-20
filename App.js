@@ -14,7 +14,6 @@ import {
   TextInput,
   View,
   Text,
-  TextInput,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';
@@ -33,15 +32,10 @@ const App = () => {
       <View style={styles.container}>
        
         <Text style={styles.welcome}>Travel Diary</Text>
-<<<<<<< HEAD
-        <View style={{height:30}}/>
-        
-        <View style={styles.emailContainer}>
-=======
+
        <View style={{height:30}}/>
         
        <View style={styles.emailContainer}>
->>>>>>> cea694cea1da0d3dbe7b694112562508794d28f1
           <TextInput style={styles.textInput} placeholder="Email"
             keyboardType="email-address"/>
         </View>

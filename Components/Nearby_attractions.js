@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Platform } from 'react-native';
 
-export default class MainScreen extends Component {
+export default class Nearby_attractions extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Path-Search</Text>
+        <Text>Nearby-attractions</Text>
       </View>
     );
   }
