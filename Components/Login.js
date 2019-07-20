@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { StyleSheet, TextInput, View, Text, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default class Log_in extends Component {
+export default class Login extends Component {
   render() {
     return (
       <View>
