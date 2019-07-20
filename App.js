@@ -14,7 +14,6 @@ import {
   TextInput,
   View,
   Text,
-  TextInput,
   StatusBar,
   TouchableOpacity,
 } from 'react-native';

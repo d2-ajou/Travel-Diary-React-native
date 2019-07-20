@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Platform } from 'react-native';
 
-export default class MainScreen extends Component {
+export default class Path_search extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>MainScreen</Text>
+        <Text>Path-Search</Text>
       </View>
     );
   }
