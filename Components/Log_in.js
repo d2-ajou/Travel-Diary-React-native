@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { StyleSheet, TextInput, View, Text, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, TextInput, View, Text, TouchableOpacity, Button } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
 
 });
 
-export default class Login extends Component {
+export default class Log_in extends Component {
   render() {
     return (
       <View>
@@ -148,8 +148,8 @@ export default class Login extends Component {
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
-            <View style={styles.button}>
-              <Text style={styles.buttonText}>SIGN IN</Text>
+            <View style={styles.createAccount}>
+              <Button onPress={() => this.goDiary_list()} title='SIGN IN' />
             </View>
           </TouchableOpacity>
         </View>
@@ -158,10 +158,18 @@ export default class Login extends Component {
         </View>
         <TouchableOpacity>
           <View style={styles.createAccount}>
-            <Text style={styles.createText}>Create new account</Text>
+            <Button onPress={() => this.goSign_up()} title='Create new Account' />
           </View>
         </TouchableOpacity>
       </View>
     );
+  }
+
+  goDiary_list() {
+    this.props.navigation.navigate('Diary_list');
+  }
+
+  goSign_up() {
+    this.props.navigation.navigate('Sign_up');
   }
 }

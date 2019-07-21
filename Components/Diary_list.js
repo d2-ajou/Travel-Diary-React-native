@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 
 export default class Diary_list extends Component {
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Diary-list</Text>
+        <Text>Diary-list page</Text>
       </View>
     );
   }
