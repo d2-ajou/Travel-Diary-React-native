@@ -7,9 +7,8 @@
 1. 깃 클론
 
    $git clone https://github.com/d2-ajou/Travel-Diary-React-native.git
-  
-  또는
-  
+   
+   
    $git clone git@github.com:d2-ajou/Travel-Diary-React-native.git
    
   
