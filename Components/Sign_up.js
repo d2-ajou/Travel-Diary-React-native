@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default class Sign_up extends Component {
 
@@ -7,8 +7,13 @@ export default class Sign_up extends Component {
     return (
       <View style={styles.container}>
         <Text>Sign_up page</Text>
+            <Button onPress={() => this.goLog_in()} title='가입완료' />
       </View>
     );
+  }
+
+  goLog_in() {
+    this.props.navigation.navigate('Main');
   }
 }
 
