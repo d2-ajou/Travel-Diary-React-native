@@ -1,8 +1,11 @@
 # Travel-Diary-React-native
 
 <h2> 실행 순서
+  
 -----------------------------------------------------------------------
+
 1. 깃 클론
+
   $git clone https://github.com/d2-ajou/Travel-Diary-React-native.git
   
   또는
@@ -24,5 +27,6 @@
 
   
 4. app 실행
+
    $react-native run-android
 -----------------------------------------------------------------------
