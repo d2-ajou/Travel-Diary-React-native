@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, TextInput, View, Text, TouchableOpacity, Button } from 'react-native';
+import { 
+  StyleSheet, TextInput, View, Text, TouchableOpacity, Button
+} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -77,7 +79,7 @@ const styles = StyleSheet.create({
     height: 50,
     padding: 10,
     borderRadius: 3,
-    marginTop: 40,
+    marginTop: 100,
     backgroundColor: 'gray',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -148,8 +150,8 @@ export default class Log_in extends Component {
             </View>
           </TouchableOpacity>
           <TouchableOpacity>
-            <View style={styles.createAccount}>
-              <Button onPress={() => this.goDiary_list()} title='SIGN IN' />
+            <View>
+              <Button style = {styles.button} onPress={() => this.goDiary_list()} title='SIGN IN' />
             </View>
           </TouchableOpacity>
         </View>
