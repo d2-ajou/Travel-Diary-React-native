@@ -7,12 +7,17 @@ import Path_search from './Components/Path_serach'
 import Write_diary from './Components/Write_diary'
 import Diary from './Components/Diary'
 import Add_diary from './Components/Add_diary';
+import MainScreen from './Components/MainScreen';
 
 const AppStackNavigator = createStackNavigator({
-  Main: {
+  Main: {                     //이 이름으로 들어감
+    screen: MainScreen,       //내가 보여줄 스크린 페이지
+
+  },
+  Log_in: {
     screen: Log_in,
     navigationOptions: {
-      title: 'TraveLog'
+      title: 'Log_in'
     }
   },
   Diary_list: {
@@ -27,10 +32,10 @@ const AppStackNavigator = createStackNavigator({
       title: 'Sign_up'
     }
   },
-  Nearby_attractions:{  //이 이름으로 들어감
-    screen: Nearby_attractions,     //내가 보여줄 스크린 페이지
+  Nearby_attractions:{  
+    screen: Nearby_attractions,     
     navigationOptions:{
-      title: 'Nearby_attractions'   //상단에 이 타이틀이 표시됨
+      title: 'Nearby_attractions'   
     }
   },
   Path_search: {
