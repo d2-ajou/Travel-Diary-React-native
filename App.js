@@ -17,7 +17,7 @@ const AppStackNavigator = createStackNavigator({
   Log_in: {
     screen: Log_in,
     navigationOptions: {
-      title: 'Log_in'
+      title: 'Log_in'         //페이지 상단에 보이는 타이틀
     }
   },
   Diary_list: {
