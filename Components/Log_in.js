@@ -21,13 +21,18 @@ const styles = StyleSheet.create({
     height: 100,
     alignItems: 'flex-start',
   },
-  createAccount: {
+  signIn: {
+    marginTop: 190,
     alignItems: 'center',
     height: 30,
   },
+  createAccount: {
+    alignItems:"center",
+    height: 100,
+  },
   normalContainer: {
+    marginTop: 150,
     alignItems: 'center',
-    marginTop: 430,
     height: 20,
 
   },
@@ -147,12 +152,12 @@ export default class Log_in extends Component {
               <Text style={styles.forgotText}>Forgot password?</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.createAccount}>
-              <Button onPress={() => this.goDiary_list()} title='SIGN IN' />
-            </View>
-          </TouchableOpacity>
         </View>
+        <TouchableOpacity>
+          <View style={styles.signIn}>
+            <Button onPress={() => this.goDiary_list()} title='SIGN IN' />
+          </View>
+        </TouchableOpacity>
         <View style={styles.normalContainer}>
           <Text style={styles.normalText}>Do not have account?</Text>
         </View>
