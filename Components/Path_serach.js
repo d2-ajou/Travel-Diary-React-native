@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, View, Text } from 'react-native';
 
 export default class Path_search extends Component {
+
   render() {
     return (
       <View style={styles.container}>

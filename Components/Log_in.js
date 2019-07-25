@@ -155,7 +155,7 @@ export default class Log_in extends Component {
         </View>
         <TouchableOpacity>
           <View style={styles.signIn}>
-            <Button onPress={() => this.goDiary_list()} title='SIGN IN' />
+            <Button onPress={() => this.goDrawer()} title='SIGN IN' />
           </View>
         </TouchableOpacity>
         <View style={styles.normalContainer}>
@@ -170,8 +170,8 @@ export default class Log_in extends Component {
     );
   }
 
-  goDiary_list() {
-    this.props.navigation.navigate('Diary_list');
+  goDrawer() {
+    this.props.navigation.navigate('Drawer');
   }
 
   goSign_up() {

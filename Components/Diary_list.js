@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import { StyleSheet, Text, View, Button, YellowBox} from 'react-native';
 
 export default class Diary_list extends Component {
-
+  
   render() {
     return (
       <View style={styles.container}>
