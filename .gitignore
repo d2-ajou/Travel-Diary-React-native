@@ -60,5 +60,5 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-yarn.lock
-package.json
+yarn.locks
+.gitignore

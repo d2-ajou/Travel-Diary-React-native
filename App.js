@@ -23,6 +23,7 @@ const AppStackNavigator = createStackNavigator({
     screen: Log_in,
     navigationOptions: {
       header: null,
+      title: 'Log_in'         //페이지 상단에 보이는 타이틀
     }
   },
 
