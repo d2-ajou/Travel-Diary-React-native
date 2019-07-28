@@ -1,5 +1,6 @@
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
+import MainScreen from './Components/MainScreen';
 import Log_in from './Components/Log_in';
 import Diary_list from './Components/Diary_list';
 import Sign_up from './Components/Sign_up';
@@ -8,7 +9,6 @@ import Path_search from './Components/Path_serach'
 import Write_diary from './Components/Write_diary'
 import Diary from './Components/Diary'
 import Add_diary from './Components/Add_diary';
-import MainScreen from './Components/MainScreen';
 import Drawer from './Components/Drawer';
 
 const AppStackNavigator = createStackNavigator({
@@ -22,8 +22,7 @@ const AppStackNavigator = createStackNavigator({
   Log_in: {
     screen: Log_in,
     navigationOptions: {
-      header: null,
-      title: 'Log_in'         //페이지 상단에 보이는 타이틀
+      header: null,        //페이지 상단에 보이는 타이틀
     }
   },
 
