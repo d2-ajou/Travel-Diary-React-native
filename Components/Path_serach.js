@@ -25,7 +25,7 @@ export default class Path_search extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Button onPress={this.handleGetDirections} title="Get Directions" />
+        <Button onPress={this.handleGetDirections} title="길찾기" />
       </View>
     );
   }
