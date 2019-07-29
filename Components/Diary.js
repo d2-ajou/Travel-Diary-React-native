@@ -16,7 +16,7 @@ export default class Diary extends Component {
     );
   }
   goAdd_diary() {
-    this.props.navigation.navigate('Add_diary');
+    this.props.navigation.navigate('Write_diary');
   }
 }
 
