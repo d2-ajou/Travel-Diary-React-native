@@ -24,10 +24,10 @@ const Path_search = () => {
      <MapView
        style={styles.map}
        region={{
-         latitude: 37.335887,
-         longitude: 126.5840,
+         latitude: 37.566636,
+         longitude: 126.978330,
          latitudeDelta: 0.015,
-         longitudeDelta: 0.0121,
+         longitudeDelta: 0.015,
        }}
      >
      </MapView>
