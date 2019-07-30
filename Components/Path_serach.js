@@ -1,54 +1,49 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React, {Fragment} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
+
 import MapView from 'react-native-maps';
 
-export default class Path_search extends Component {
-  state = {
-    active: "home"
-  }
-
-  getInitialState() {
-    return {
-      region: {
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-      },
-    };
-  }
-  
-  onRegionChange(region) {
-    this.setState({ region });
-  }
-  
-  render() {
-    return (
-      <View style={styles.container}>
-        <MapView style={styles.map}
-          region={this.state.region}
-          onRegionChange={this.onRegionChange}
-        />
-      </View>
-    );
-  }
-}
+const Path_search = () => {
+  return (
+    <View style={styles.container}>
+     <MapView
+       style={styles.map}
+       region={{
+         latitude: 37.335887,
+         longitude: 126.5840,
+         latitudeDelta: 0.015,
+         longitudeDelta: 0.0121,
+       }}
+     >
+     </MapView>
+   </View>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
+  map: {
+    ...StyleSheet.absoluteFillObject,
   },
-  map:{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0
-  }
+  container: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
 });
+
+export default Path_search;
