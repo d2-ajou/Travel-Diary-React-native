@@ -1,21 +1,49 @@
-import React, { Component } from 'react';
-import { StyleSheet, Platform, View, Text } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
 
-export default class Path_search extends Component {
+import React, {Fragment} from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Path-Search</Text>
-      </View>
-    );
-  }
-}
+import MapView from 'react-native-maps';
+
+const Path_search = () => {
+  return (
+    <View style={styles.container}>
+     <MapView
+       style={styles.map}
+       region={{
+         latitude: 37.566636,
+         longitude: 126.978330,
+         latitudeDelta: 0.015,
+         longitudeDelta: 0.015,
+       }}
+     >
+     </MapView>
+   </View>
+  );
+};
 
 const styles = StyleSheet.create({
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
   container: {
-    flex: 1,
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });
+
+export default Path_search;
